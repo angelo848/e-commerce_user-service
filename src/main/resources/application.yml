@@ -1,13 +1,11 @@
 spring:
   application:
-    name: user-
-
+    name: user-service
   datasource:
     url: ${DB_HOST}
     username: ${DB_USER}
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
-
     jpa:
       hibernate:
         ddl-auto: update  # Or use `validate` / `none` / `create-drop` for different environments
@@ -19,6 +17,16 @@ spring:
 
 server:
   port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
 
 logging:
   level:
