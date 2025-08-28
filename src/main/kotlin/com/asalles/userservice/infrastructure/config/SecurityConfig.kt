@@ -1,4 +1,4 @@
-package com.asalles.userservice.config
+package com.asalles.userservice.infrastructure.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
