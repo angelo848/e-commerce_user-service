@@ -14,6 +14,13 @@ spring:
         hibernate:
           format_sql: true
           dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    enabled: true
+    locations: classpath:db/migrations/postgres
+    schemas: user_db
+    url: ${DB_HOST}
+    user: ${DB_USER}
+    password: ${DB_PASSWORD}
 
 server:
   port: 8080

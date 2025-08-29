@@ -17,7 +17,7 @@ import java.time.LocalDate
 class UserProfile(
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
 
     @OneToOne(fetch = FetchType.LAZY)

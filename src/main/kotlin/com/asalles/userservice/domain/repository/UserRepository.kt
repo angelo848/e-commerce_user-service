@@ -13,6 +13,4 @@ interface UserRepository {
     fun existsByEmail(email: String): Boolean
 
     fun delete(user: User)
-
-    fun update(user: User)
 }
